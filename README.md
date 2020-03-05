@@ -11,12 +11,12 @@
 ## Lectures:
 * __01__ (2.18 Tue): Course overview ([Syllabus](#syllabus)), Python, Github, Etc.
 * __02__ (2.21 Fri): __HSBC Guest Lecture [1/4]__ Model management cycle in banking industry, Tool setup (GCP/Ali Cloud).
-* __03__ (2.25 Tue): Python crash course ([Basic](py/PythonCrashCourse_Derek_Banas.ipynb) | [Numpy](py/PythonCrashCourse_Numpy.ipynb)) | 
-Intro ([Slides](files/MLF_Intro.pdf), Reading: __PML__ Ch. 1)
-* __04__ (2.28 Fri): Regression ([Slides](files/MLF_Regression.pdf))
-* __05__ (3.03 Tue): __PML__ Ch. 2 (Perceptron, Adaline, Gradient descent, SGD), Regression weight update ([Slides](files/MLF_Regression.pdf))
-* __06__ (3.06 Fri): Logistic Regression ([Slides](files/MLF_Regression.pdf), Reading: __PML__ Ch. 3) 
-* __07__ (3.10 Tue): SVM/KNN/Decision Tree ([Slides](files/MLF_SVM_KNN_Tree.pdf), Reading: __PML__ Ch. 3) 
+* __03__ (2.25 Tue): Brief Python crash course ([Basic](py/PythonCrashCourse_Derek_Banas.ipynb) | [Numpy](py/PythonCrashCourse_Numpy.ipynb), Notebook Shorcut Keys) | 
+Intro ([Slides](files/MLF_Intro.pdf), Reading: __PML__ Ch. 1) | Notations, Regression ([Slides](files/MLF_Regression.pdf))
+* __04__ (2.28 Fri): Regression weight update ([Slides](files/MLF_Regression.pdf)) __PML__ Ch. 2 (Perceptron, Adaline, Gradient descent, SGD), 
+* __05__ (3.03 Tue): Logistic Regression ([Slides](files/MLF_Regression.pdf), Reading: __PML__ Ch. 3) 
+* __06__ (3.06 Fri): LR (continued) | SVM ([Slides](files/MLF_SVM_KNN_Tree.pdf), Reading: __PML__ Ch. 3) 
+* __07__ (3.10 Tue): KNN and Decision Tree ([Slides](files/MLF_SVM_KNN_Tree.pdf), Reading: __PML__ Ch. 3) 
 * __08__ (3.13 Fri):
 * __09__ (3.17 Tue):
 * __10__ (3.20 Fri): __HSBC Guest Lecture [2/4]__ Data mining, profiling, visualization, and conclusion. 
@@ -64,7 +64,18 @@ Intro ([Slides](files/MLF_Intro.pdf), Reading: __PML__ Ch. 1)
   * Install [Anaconda](https://www.anaconda.com/download/) Python distribution (__3.X version__, not 2.X version). Anaconda distribution is core Python + useful scientific computation libraries (e.g., numpy, scipy, pandas) + package management system (pip or conda)
   * Install [PyCharm](https://www.jetbrains.com/pycharm/) Community version. (Or Professional version after applying for [free student license](https://www.jetbrains.com/student/))
   * Save the screenshot of (1) Github Desktop (showing 2 repositories) (2) Jupyter Notebook (Anaconda) (3) PyCharm (See my [example](https://github.com/jaehyukchoi/PHBS_MLF_2019/tree/master/HW0)) and make sure to press __`Push Origin`__ to sync with the online repository in github.com.
-
+* ### __Set 1: [Playing with Pandas dataframe]__ [Due by 3.11 Wed]
+  * The goal of this HW is to be familiar with `pandas` package and dataframe. Due to limited time, I cannot cover pandas in class. You need to teach yourself. Remenber that there's many answers to do the task I am asking below. Use your own way.
+  * For this HW, we will use [Polish companies bankruptcy data Data Set](http://archive.ics.uci.edu/ml/datasets/Polish+companies+bankruptcy+data) from UCI Machine Learning Repository. Download the dataset and put the 4th year file (`4year.arff`) in your `YOUR_GITHUB_ID/PHBS_MLF_2019/HW1/`
+  * I did a basic process of the data (loading to dataframe and creating `bankruptcy` column). See my [github](https://github.com/jaehyukchoi/PHBS_MLF_2019/tree/master/HW1/)
+  * We are going to use the following 4 features:
+  `X1 net profit / total assets`, `X2 total liabilities / total assets`, `X7 EBIT / total assets`, `X10 equity / total assets`, and `class`
+  * Create a new dataframe with only 4 feataures (and and `Bankruptcy`). Properly rename the columns to `X1`, `X2`, `X7`, and `X10`
+  * Fill-in the missing values `na` with the mean. (See Ch 4 of `PML`)
+  * Find the mean and std of the 4 features among all, bankrupt and still-operating companies (3 groups).
+  * How many companies have `X1` values 1 std below the mean __AND__ `X10` values 1 std below the mean?
+  * What is the ratio of the bankrupted companies among the sub-groups above?
+  
 ## Course Project
 * Previous Years: [2018](past-years/2018.M1/Project.md)
 <!--
